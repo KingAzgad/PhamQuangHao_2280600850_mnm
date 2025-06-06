@@ -59,7 +59,7 @@ class AccountController
         $fullName = $_POST['fullname'] ?? '';
         $email = $_POST['email'] ?? '';
         $password = $_POST['password'] ?? '';
-        $confirmPassword = $_POST['confirm_password'] ?? ''; // Sửa tên field này
+        $confirmPassword = $_POST['confirm_password'] ?? '';
         $role = $_POST['role'] ?? 'user';
         
         $errors = [];
@@ -181,8 +181,6 @@ class AccountController
     {
         $fullname = $_POST['fullname'] ?? '';
         $email = $_POST['email'] ?? '';
-        $phone = $_POST['phone'] ?? '';
-        $address = $_POST['address'] ?? '';
 
         $errors = [];
 
@@ -207,7 +205,7 @@ class AccountController
             $user = $this->accountModel->getAccountByUsername($_SESSION['username']);
             include_once 'app/views/Account/profile.php';
         } else {
-            $result = $this->accountModel->updateProfile($_SESSION['username'], $fullname, $email, $phone, $address);
+            $result = $this->accountModel->updateProfile($_SESSION['username'], $fullname, $email);
             
             if ($result) {
                 $success = "Cập nhật thông tin thành công!";

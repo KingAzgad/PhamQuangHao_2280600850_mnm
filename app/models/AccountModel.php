@@ -68,28 +68,22 @@ class AccountModel
         }
     }
 
-    public function updateProfile($username, $fullname, $email, $phone = '', $address = '')
+    public function updateProfile($username, $fullname, $email)
     {
         try {
             $query = "UPDATE " . $this->table_name . " SET 
                       fullname=:fullname, 
-                      email=:email, 
-                      phone=:phone, 
-                      address=:address 
+                      email=:email 
                       WHERE username=:username";
 
             $stmt = $this->conn->prepare($query);
 
             $fullname = htmlspecialchars(strip_tags($fullname));
             $email = htmlspecialchars(strip_tags($email));
-            $phone = htmlspecialchars(strip_tags($phone));
-            $address = htmlspecialchars(strip_tags($address));
             $username = htmlspecialchars(strip_tags($username));
 
             $stmt->bindParam(":fullname", $fullname);
             $stmt->bindParam(":email", $email);
-            $stmt->bindParam(":phone", $phone);
-            $stmt->bindParam(":address", $address);
             $stmt->bindParam(":username", $username);
 
             return $stmt->execute();

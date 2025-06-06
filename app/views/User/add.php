@@ -37,7 +37,7 @@
                             Tên đăng nhập *
                         </label>
                         <input type="text" id="username" name="username" required
-                            value="<?php echo $_POST['username'] ?? ''; ?>"
+                            value="<?php echo htmlspecialchars($_POST['username'] ?? ''); ?>"
                             class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                     </div>
 
@@ -46,7 +46,7 @@
                             Họ và tên *
                         </label>
                         <input type="text" id="fullname" name="fullname" required
-                            value="<?php echo $_POST['fullname'] ?? ''; ?>"
+                            value="<?php echo htmlspecialchars($_POST['fullname'] ?? ''); ?>"
                             class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                     </div>
 
@@ -55,7 +55,7 @@
                             Email *
                         </label>
                         <input type="email" id="email" name="email" required
-                            value="<?php echo $_POST['email'] ?? ''; ?>"
+                            value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>"
                             class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                     </div>
 

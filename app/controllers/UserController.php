@@ -116,13 +116,13 @@ class UserController
             $error = implode('<br>', $errors);
             include_once 'app/views/User/add.php';
         } else {
-            $result = $this->accountModel->createUser($username, $fullName, $email, $password, $role, $phone, $address);
+            $result = $this->accountModel->createUser($username, $fullName, $email, $password, $role);
             
             if ($result) {
                 header('Location: /webbanhang/user?success=User created successfully');
                 exit;
             } else {
-                $error = "Có lỗi xảy ra khi tạo người dùng. Vui lòng thử lại!";
+                $error = "Có lỗi xảy ra khi tạo người dùng. Vui lòng kiểm tra lại thông tin hoặc thử lại!";
                 include_once 'app/views/User/add.php';
             }
         }
@@ -159,7 +159,7 @@ class UserController
             $user = $this->accountModel->getUserById($id);
             include_once 'app/views/User/edit.php';
         } else {
-            $result = $this->accountModel->updateUser($id, $fullName, $email, $role, $phone, $address, $password);
+            $result = $this->accountModel->updateUser($id, $fullName, $email, $role, $password);
             
             if ($result) {
                 header('Location: /webbanhang/user?success=User updated successfully');
