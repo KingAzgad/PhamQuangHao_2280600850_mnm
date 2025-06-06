@@ -23,6 +23,8 @@ class UserController
     public function index()
     {
         $users = $this->accountModel->getAllUsers();
+        // Debug: Ghi log để kiểm tra dữ liệu
+        error_log("Users retrieved: " . print_r($users, true));
         include_once 'app/views/User/list.php';
     }
 
@@ -82,7 +84,6 @@ class UserController
         
         $errors = [];
         
-        // Validation
         if (empty($username)) {
             $errors['username'] = "Vui lòng nhập tên đăng nhập!";
         }
@@ -102,12 +103,10 @@ class UserController
             $errors['email'] = "Email không hợp lệ!";
         }
         
-        // Kiểm tra username đã tồn tại
         if ($this->accountModel->getAccountByUsername($username)) {
             $errors['username'] = "Tên đăng nhập này đã được sử dụng!";
         }
         
-        // Kiểm tra email đã tồn tại
         if ($this->accountModel->getAccountByEmail($email)) {
             $errors['email'] = "Email này đã được sử dụng!";
         }
@@ -137,7 +136,6 @@ class UserController
         
         $errors = [];
         
-        // Validation
         if (empty($fullName)) {
             $errors['fullname'] = "Vui lòng nhập họ và tên!";
         }
@@ -148,7 +146,6 @@ class UserController
             $errors['email'] = "Email không hợp lệ!";
         }
         
-        // Kiểm tra email đã tồn tại (trừ user hiện tại)
         $existingUser = $this->accountModel->getAccountByEmail($email);
         if ($existingUser && $existingUser->id != $id) {
             $errors['email'] = "Email này đã được sử dụng!";

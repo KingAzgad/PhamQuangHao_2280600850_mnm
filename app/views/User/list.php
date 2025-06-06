@@ -68,7 +68,7 @@
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                        <?php if (!empty($users)): ?>
+                        <?php if (isset($users) && is_array($users) && !empty($users)): ?>
                             <?php foreach ($users as $user): ?>
                                 <tr class="hover:bg-gray-50">
                                     <td class="px-6 py-4 whitespace-nowrap">
@@ -78,18 +78,18 @@
                                             </div>
                                             <div>
                                                 <div class="text-sm font-medium text-gray-900">
-                                                    <?php echo htmlspecialchars($user->fullname); ?>
+                                                    <?php echo htmlspecialchars($user->fullname ?? ''); ?>
                                                 </div>
                                                 <div class="text-sm text-gray-500">
-                                                    @<?php echo htmlspecialchars($user->username); ?>
+                                                    @<?php echo htmlspecialchars($user->username ?? ''); ?>
                                                 </div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <div class="text-sm text-gray-900"><?php echo htmlspecialchars($user->email); ?></div>
+                                        <div class="text-sm text-gray-900"><?php echo htmlspecialchars($user->email ?? ''); ?></div>
                                         <?php if (!empty($user->phone)): ?>
-                                            <div class="text-sm text-gray-500"><?php echo htmlspecialchars($user->phone); ?></div>
+                                            <div class="text-sm text-gray-500"><?php echo htmlspecialchars($user->phone ?? ''); ?></div>
                                         <?php endif; ?>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
@@ -116,7 +116,7 @@
                                                 Sửa
                                             </a>
                                             <?php if ($user->username !== $_SESSION['username']): ?>
-                                                <button onclick="confirmDelete(<?php echo $user->id; ?>, '<?php echo htmlspecialchars($user->username); ?>')" 
+                                                <button onclick="confirmDelete(<?php echo $user->id; ?>, '<?php echo htmlspecialchars($user->username ?? ''); ?>')" 
                                                         class="text-red-600 hover:text-red-900 bg-red-100 hover:bg-red-200 px-3 py-1 rounded transition-colors">
                                                     <i class="fas fa-trash mr-1"></i>
                                                     Xóa
@@ -130,7 +130,10 @@
                             <tr>
                                 <td colspan="5" class="px-6 py-12 text-center text-gray-500">
                                     <i class="fas fa-users text-4xl mb-4"></i>
-                                    <p>Không có người dùng nào trong hệ thống</p>
+                                    <p>Không có người dùng nào trong hệ thống hoặc có lỗi khi tải dữ liệu.</p>
+                                    <?php if (isset($users) && empty($users)): ?>
+                                        <p>Kiểm tra log để xem chi tiết lỗi.</p>
+                                    <?php endif; ?>
                                 </td>
                             </tr>
                         <?php endif; ?>
@@ -189,7 +192,6 @@ function deleteUser() {
     }
 }
 
-// Close modal when clicking outside
 document.getElementById('deleteModal').addEventListener('click', function(e) {
     if (e.target === this) {
         closeDeleteModal();

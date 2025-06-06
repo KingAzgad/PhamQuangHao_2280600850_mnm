@@ -116,10 +116,16 @@ class AccountModel
     public function getAllUsers()
     {
         try {
+            if (!$this->conn) {
+                error_log("Database connection failed in getAllUsers");
+                return [];
+            }
             $query = "SELECT * FROM " . $this->table_name . " ORDER BY created_at DESC";
             $stmt = $this->conn->prepare($query);
             $stmt->execute();
-            return $stmt->fetchAll(PDO::FETCH_OBJ);
+            $users = $stmt->fetchAll(PDO::FETCH_OBJ);
+            error_log("Fetched users count: " . count($users)); // Debug log
+            return $users;
         } catch (PDOException $e) {
             error_log("Error in AccountModel::getAllUsers: " . $e->getMessage());
             return [];
