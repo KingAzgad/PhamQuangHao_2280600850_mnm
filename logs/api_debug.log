@@ -1,0 +1,67 @@
+[2025-06-13 07:12:23] Bắt đầu phương thức store: {"method":"POST"}
+[2025-06-13 07:12:23] Bắt đầu xác thực
+[2025-06-13 07:12:23] Kết quả xác thực: {"success":true}
+[2025-06-13 07:12:23] Kiểm tra role: {"session_role":"admin"}
+[2025-06-13 07:12:23] Dữ liệu đầu vào: {"name":"PHAM QUANG HAO","description":"PHAM QUANG HAOPHAM QUANG HAOPHAM QUANG HAO","price":"5555","category_id":"1","image":{"name":"quan-ao-hiphop-tai-hcm-2.jpg","full_path":"quan-ao-hiphop-tai-hcm-2.jpg","type":"image\/jpeg","tmp_name":"C:\\Users\\MT\\AppData\\Local\\Temp\\phpA94F.tmp","error":0,"size":59193}}
+[2025-06-13 07:12:23] Bắt đầu upload ảnh
+[2025-06-13 07:12:23] Upload ảnh thành công: {"image_path":"uploads\/684bcf573cdfc_quan-ao-hiphop-tai-hcm-2.jpg"}
+[2025-06-13 07:12:23] Gọi addProduct: {"name":"PHAM QUANG HAO","description":"PHAM QUANG HAOPHAM QUANG HAOPHAM QUANG HAO","price":"5555","category_id":"1","imagePath":"uploads\/684bcf573cdfc_quan-ao-hiphop-tai-hcm-2.jpg"}
+[2025-06-13 07:12:23] Thêm sản phẩm thành công
+[2025-06-13 07:24:15] Bắt đầu xác thực
+[2025-06-13 07:24:15] Xác thực thất bại - Không có JWT
+[2025-06-13 07:30:45] Bắt đầu xác thực
+[2025-06-13 07:30:45] Kết quả xác thực: {"success":true}
+[2025-06-13 07:30:47] Bắt đầu xác thực
+[2025-06-13 07:30:47] Kết quả xác thực: {"success":true}
+[2025-06-13 07:30:49] Bắt đầu xác thực
+[2025-06-13 07:30:49] Kết quả xác thực: {"success":true}
+[2025-06-13 07:30:51] Bắt đầu xác thực
+[2025-06-13 07:30:51] Kết quả xác thực: {"success":true}
+[2025-06-13 07:30:52] Bắt đầu xác thực
+[2025-06-13 07:30:52] Kết quả xác thực: {"success":true}
+[2025-06-13 07:37:24] Bắt đầu phương thức store: {"method":"POST"}
+[2025-06-13 07:37:24] Bắt đầu xác thực
+[2025-06-13 07:37:24] Xác thực thất bại - Không có JWT
+[2025-06-13 07:37:24] Lỗi xác thực
+[2025-06-13 07:39:27] Bắt đầu xác thực
+[2025-06-13 07:39:27] Xác thực thất bại - Không có JWT
+[2025-06-13 07:40:11] Bắt đầu xác thực
+[2025-06-13 07:40:11] Xác thực thất bại - Không có JWT
+[2025-06-13 07:40:13] Bắt đầu xác thực
+[2025-06-13 07:40:13] Xác thực thất bại - Không có JWT
+[2025-06-13 07:40:22] Bắt đầu xác thực
+[2025-06-13 07:40:22] Xác thực thất bại - Không có JWT
+[2025-06-13 07:40:32] Bắt đầu xác thực
+[2025-06-13 07:40:32] Xác thực thất bại - Không có JWT
+[2025-06-13 07:40:41] Bắt đầu xác thực
+[2025-06-13 07:40:41] Xác thực thất bại - Không có JWT
+[2025-06-13 08:13:14] Bắt đầu xác thực
+[2025-06-13 08:13:14] Kết quả xác thực: {"success":true}
+[2025-06-13 08:13:21] Bắt đầu xác thực
+[2025-06-13 08:13:21] Kết quả xác thực: {"success":true}
+[2025-06-13 08:13:43] Bắt đầu phương thức store: {"method":"POST"}
+[2025-06-13 08:13:43] Bắt đầu xác thực
+[2025-06-13 08:13:43] Kết quả xác thực: {"success":true}
+[2025-06-13 08:13:43] Kiểm tra role: {"session_role":"admin"}
+[2025-06-13 08:13:43] Dữ liệu đầu vào: {"name":"PHAM QUANG HAO","description":"PHAM QUANG HAOPHAM QUANG HAO","price":"5555","category_id":"1","image":{"name":"wow.jpg","full_path":"wow.jpg","type":"image\/jpeg","tmp_name":"C:\\Users\\MT\\AppData\\Local\\Temp\\phpD225.tmp","error":0,"size":77073}}
+[2025-06-13 08:13:43] Bắt đầu upload ảnh
+[2025-06-13 08:13:43] Upload ảnh thành công: {"image_path":"uploads\/684bddb7ac54b_wow.jpg"}
+[2025-06-13 08:13:43] Gọi addProduct: {"name":"PHAM QUANG HAO","description":"PHAM QUANG HAOPHAM QUANG HAO","price":"5555","category_id":"1","imagePath":"uploads\/684bddb7ac54b_wow.jpg"}
+[2025-06-13 08:13:43] Thêm sản phẩm thành công
+[2025-06-13 08:13:46] Bắt đầu xác thực
+[2025-06-13 08:13:46] Kết quả xác thực: {"success":true}
+[2025-06-13 08:13:52] Bắt đầu xác thực
+[2025-06-13 08:13:52] Kết quả xác thực: {"success":true}
+[2025-06-13 08:16:11] Bắt đầu phương thức store: {"method":"POST"}
+[2025-06-13 08:16:11] Bắt đầu xác thực
+[2025-06-13 08:16:11] Kết quả xác thực: {"success":true}
+[2025-06-13 08:16:11] Kiểm tra role: {"session_role":"admin"}
+[2025-06-13 08:16:11] Dữ liệu đầu vào: {"name":"dsadasdasd","description":"sdadsadsadasd","price":"55555","category_id":"1","image":{"name":"quan-ao-hiphop-tai-hcm-2.jpg","full_path":"quan-ao-hiphop-tai-hcm-2.jpg","type":"image\/jpeg","tmp_name":"C:\\Users\\MT\\AppData\\Local\\Temp\\php138B.tmp","error":0,"size":59193}}
+[2025-06-13 08:16:11] Bắt đầu upload ảnh
+[2025-06-13 08:16:11] Upload ảnh thành công: {"image_path":"uploads\/684bde4b818b5_quan-ao-hiphop-tai-hcm-2.jpg"}
+[2025-06-13 08:16:11] Gọi addProduct: {"name":"dsadasdasd","description":"sdadsadsadasd","price":"55555","category_id":"1","imagePath":"uploads\/684bde4b818b5_quan-ao-hiphop-tai-hcm-2.jpg"}
+[2025-06-13 08:16:11] Thêm sản phẩm thành công
+[2025-06-13 08:16:14] Bắt đầu xác thực
+[2025-06-13 08:16:14] Kết quả xác thực: {"success":true}
+[2025-06-13 08:34:57] Bắt đầu xác thực
+[2025-06-13 08:34:57] Kết quả xác thực: {"success":true}
